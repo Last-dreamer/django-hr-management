@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Employee System</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="booking-form">
+          <h3 style="color: bisque;padding-top: 5%;">Add Employee Details</h3>
+    <form method="POST" action="/add">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label class="form-label">Name:</label>
+        <div>{{form.name}}</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email</label>
+       <div>{{form.email}}</div>
+      </div>
+
+      <div class="form-group">
+       <label class="form-label">CNIC</label>
+       <div>{{form.cnic}}</div>
+      </div>
+
+        <div class="form-group">
+       <label class="form-label">Dept</label>
+       <div>{{form.dept}}</div>
+      </div>
+
+      <button type="submit" class="btn-success my-4">Submit</button>
+      <button type="submit" class="btn-success my-4">Submit</button>
+    </form>
+  </div></div>
+  </body>
+</html>
